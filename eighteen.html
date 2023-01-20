@@ -1,0 +1,33 @@
+<!--JS for try catch 2 (with OK CANCEL alert box)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Box with ok cancel</title>
+    <script>
+        var txt=" ";
+        function message()
+        {
+            try
+            {
+                addalert("Welcome Guest");
+            }
+            catch(w)
+            {
+                txt="These was an error on this page.\n\n";
+                txt+="Click OK to continue\n\n";
+                txt+="or CANCEL to return to the home page.\n\n";
+                  if(!confirm(txt))
+                  {
+                    document.location.href="https://google.com";
+                  }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="view message" onclick="message()"/>
+</body>
+</html>
